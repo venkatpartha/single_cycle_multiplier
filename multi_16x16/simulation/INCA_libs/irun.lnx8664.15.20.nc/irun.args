@@ -4,4 +4,8 @@
 //
 -access
 +rwc
+../rtl/cla.v
+../rtl/wallaceTree_8PP.v
+../rtl/pp_8_Gen.v
 ../rtl/topMod_02.v
+../verification/topModTB_01.v

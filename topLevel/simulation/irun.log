@@ -1,43 +1,86 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 02, 2023 at 21:35:06 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 09, 2023 at 08:55:53 IST
 irun
 	-access +rwc
-	../rtl/ieeewall.v
-file: ../rtl/ieeewall.v
-	module worklib.compressor42_vec:v
-		errors: 0, warnings: 0
-	module worklib.compressor32_vec:v
-		errors: 0, warnings: 0
-	module worklib.pp_tree16x64:v
-		errors: 0, warnings: 0
+	../rtl/multi_f.v
+	../verification/negativeValue_TB.v
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
-		pp_tree16x64
+		tb_booth_radix4_multiplier
 	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.compressor32_vec:v <0x6dee8e9c>
-			streams:   2, words:  1361
-		worklib.compressor42_vec:v <0x12f42d61>
-			streams:  10, words:  5364
-		worklib.compressor42_vec:v <0x39f4f48b>
-			streams:  10, words:  4618
-		worklib.pp_tree16x64:v <0x0f697ea8>
-			streams:   8, words:  2430
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		                  Instances  Unique
-		Modules:                  9       3
-		Scalar wires:          2375       -
-		Vectored wires:          24       -
-		Cont. assignments:     2375      15
-		Pseudo assignments:       1       1
-		Simulation timescale:   1ps
-	Writing initial simulation snapshot: worklib.pp_tree16x64:v
-Loading snapshot worklib.pp_tree16x64:v .................... Done
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:              15      15
+		Scalar wires:            1       -
+		Vectored wires:         19       -
+		Always blocks:           2       2
+		Initial blocks:          1       1
+		Cont. assignments:      17      17
+		Pseudo assignments:      3       3
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_booth_radix4_multiplier:v
+Loading snapshot worklib.tb_booth_radix4_multiplier:v .................... Done
 ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
 ncsim> run
-ncsim: *W,RNQUIE: Simulation is complete.
+==================================================
+A = -1 (0xffffffff), B = -1 (0xffffffff)
+Expected Product       = 1
+Sum of Partial Products= 1
+? PASS: Product matches!
+==================================================
+==================================================
+A = -2 (0xfffffffe), B = -3 (0xfffffffd)
+Expected Product       = 6
+Sum of Partial Products= 6
+? PASS: Product matches!
+==================================================
+==================================================
+A = -15 (0xfffffff1), B = -7 (0xfffffff9)
+Expected Product       = 105
+Sum of Partial Products= 105
+? PASS: Product matches!
+==================================================
+==================================================
+A = -128 (0xffffff80), B = -64 (0xffffffc0)
+Expected Product       = 8192
+Sum of Partial Products= 8192
+? PASS: Product matches!
+==================================================
+==================================================
+A = -1024 (0xfffffc00), B = -256 (0xffffff00)
+Expected Product       = 262144
+Sum of Partial Products= 262144
+? PASS: Product matches!
+==================================================
+==================================================
+A = 32768 (0x00008000), B = -2 (0xfffffffe)
+Expected Product       = -65536
+Sum of Partial Products= -65536
+? PASS: Product matches!
+==================================================
+==================================================
+A = 100000 (0x000186a0), B = -123 (0xffffff85)
+Expected Product       = -12300000
+Sum of Partial Products= -12300000
+? PASS: Product matches!
+==================================================
+==================================================
+A = -2147483648 (0x80000000), B = -1 (0xffffffff)
+Expected Product       = 2147483648
+Sum of Partial Products= 2147483648
+? PASS: Product matches!
+==================================================
+==================================================
+A = 9999999 (0x0098967f), B = -1111 (0xfffffba9)
+Expected Product       = -11109998889
+Sum of Partial Products= -11109998889
+? PASS: Product matches!
+==================================================
+Simulation complete via $finish(1) at time 90 NS + 0
+../verification/negativeValue_TB.v:75     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 02, 2023 at 21:35:07 IST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 09, 2023 at 08:55:54 IST  (total: 00:00:01)

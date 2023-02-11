@@ -1,0 +1,28 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 09, 2023 at 10:12:59 IST
+irun
+	-access +rwc
+	../rtl/topMod_02.v
+	../rtl/wallaceTree_8PP.v
+	../rtl/pp_8_Gen.v
+	../rtl/cla.v
+	../verification/highLowTB.v
+Loading snapshot worklib.tb_booth16x16_extremes:v .................... Done
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+====== Extreme Value Testbench ======
+UNSIGNED: A=0 B=0 | DUT=0 Ref=0 ?
+UNSIGNED: A=1 B=65535 | DUT=65535 Ref=65535 ?
+UNSIGNED: A=65535 B=65535 | DUT=4294901761 Ref=4294836225 ?
+UNSIGNED: A=32768 B=32768 | DUT=3221225472 Ref=1073741824 ?
+SIGNED:   A=0 B=0 | DUT=0 Ref=0 ?
+SIGNED:   A=32767 B=32767 | DUT=1073676289 Ref=1073676289 ?
+SIGNED:   A=-32768 B=-32768 | DUT=1073741824 Ref=1073741824 ?
+SIGNED:   A=32767 B=-32768 | DUT=-1073709056 Ref=-1073709056 ?
+SIGNED:   A=-32768 B=1 | DUT=-32768 Ref=-32768 ?
+SIGNED:   A=-1 B=-1 | DUT=1 Ref=1 ?
+====== Completed Extreme Tests ======
+Simulation complete via $finish(1) at time 50 NS + 0
+../verification/highLowTB.v:71         $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 09, 2023 at 10:13:00 IST  (total: 00:00:01)

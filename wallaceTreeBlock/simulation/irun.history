@@ -1,3 +1,5 @@
 s1(22Feb2023:02:14:00):  irun -access +rwc ../rtl/test02.v ../verification/test02_tb.v 
 s2(26Feb2023:01:59:05):  irun -access +rwc ../rtl/test03.v ../verification/test03_tb.v 
 s3(26Feb2023:02:01:00):  irun -access +rwc ../rtl/test03.v ../verification/test03_tb.v 
+s4(09Mar2023:09:22:34):  irun -access +rwc ../rtl/test03.v ../verification/test03_tb.v 
+s5(09Mar2023:09:24:09):  irun -access +rwc ../rtl/test03.v ../verification/test03_tb.v 

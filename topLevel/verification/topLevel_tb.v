@@ -34,17 +34,17 @@ module tb_booth32x32_top;
         A = 32'd15;  B = 32'd3; #10;
         exp_unsigned = A * B;
         dut_result = {PROD_MSB, PROD_LSB};
-        $display("UNSIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_unsigned, dut_result);
+        $display("UNSIGNED: %h * %h = %h | DUT = %h", A, B, exp_unsigned, dut_result);
 
         A = 32'd12345;  B = 32'd6789; #10;
         exp_unsigned = A * B;
         dut_result = {PROD_MSB, PROD_LSB};
-        $display("UNSIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_unsigned, dut_result);
+        $display("UNSIGNED: %h * %h = %h | DUT = %h", A, B, exp_unsigned, dut_result);
 
         A = 32'hFFFFFFFF;  B = 32'd2; #10;  // (max unsigned * 2)
         exp_unsigned = A * B;
         dut_result = {PROD_MSB, PROD_LSB};
-        $display("UNSIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_unsigned, dut_result);
+        $display("UNSIGNED: %h * %h = %h | DUT = %h", A, B, exp_unsigned, dut_result);
 
         // ------------------------------
         // Signed Tests
@@ -54,17 +54,17 @@ module tb_booth32x32_top;
         A = -32'sd10;  B = 32'sd20; #10;
         exp_signed = A * B;
         dut_result = {PROD_MSB, PROD_LSB};
-        $display("SIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_signed, dut_result);
+        $display("SIGNED: %h * %h = %h | DUT = %h", A, B, exp_signed, dut_result);
 
         A = -32'sd1234;  B = -32'sd56; #10;
         exp_signed = A * B;
         dut_result = {PROD_MSB, PROD_LSB};
-        $display("SIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_signed, dut_result);
+        $display("SIGNED: %h * %h = %h | DUT = %h", A, B, exp_signed, dut_result);
 
         A = 32'sd32768;  B = -32'sd32768; #10;
         exp_signed = A * B;
         dut_result = {PROD_MSB, PROD_LSB};
-        $display("SIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_signed, dut_result);
+        $display("SIGNED: %h * %h = %h | DUT = %h", A, B, exp_signed, dut_result);
 
         // ------------------------------
         // Random Tests
@@ -77,11 +77,11 @@ module tb_booth32x32_top;
             if (alu_signed) begin
                 exp_signed = $signed(A) * $signed(B);
                 dut_result = {PROD_MSB, PROD_LSB};
-                $display("RANDOM SIGNED: %0d * %0d = %0d | DUT = %0d", $signed(A), $signed(B), exp_signed, dut_result);
+                $display("RANDOM SIGNED: %h * %h = %h | DUT = %h", $signed(A), $signed(B), exp_signed, dut_result);
             end else begin
                 exp_unsigned = A * B;
                 dut_result = {PROD_MSB, PROD_LSB};
-                $display("RANDOM UNSIGNED: %0d * %0d = %0d | DUT = %0d", A, B, exp_unsigned, dut_result);
+                $display("RANDOM UNSIGNED: %h * %h = %h | DUT = %h", A, B, exp_unsigned, dut_result);
             end
         end
 

@@ -1,0 +1,11 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-access
++rwc
+../rtl/topMod_02.v
+../rtl/wallaceTree_8PP.v
+../rtl/pp_8_Gen.v
+../rtl/cla.v
+../verification/highLowTB.v

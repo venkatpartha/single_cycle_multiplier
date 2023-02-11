@@ -1,0 +1,58 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 09, 2023 at 10:07:48 IST
+irun
+	-access +rwc
+	topMod.v
+	topLevel_tb.v
+	test03.v
+	multi_f.v
+Recompiling... reason: file './multi_f.v' is newer than expected.
+	expected: Thu Mar  9 09:58:23 2023
+	actual:   Thu Mar  9 10:07:42 2023
+file: multi_f.v
+	module worklib.booth_radix4_multiplier:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_booth32x32_top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.booth_radix4_multiplier:v <0x7352aca7>
+			streams:  20, words:  9607
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 12       6
+		Registers:               12      12
+		Scalar wires:          2376       -
+		Vectored wires:          41       -
+		Always blocks:            2       2
+		Initial blocks:           1       1
+		Cont. assignments:     2393      33
+		Pseudo assignments:       4       4
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.tb_booth32x32_top:v
+Loading snapshot worklib.tb_booth32x32_top:v .................... Done
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+===============================================
+      Booth Multiplier 32x32 Testbench         
+===============================================
+UNSIGNED: 0000000f * 00000003 = 000000000000002d | DUT = 000000000000002d
+UNSIGNED: 00003039 * 00001a85 = 0000000004fed79d | DUT = 0000000004fed79d
+UNSIGNED: ffffffff * 00000002 = 00000001fffffffe | DUT = 00000001fffffffe
+SIGNED: fffffff6 * 00000014 = ffffffffffffff38 | DUT = 00000013ffffff38
+SIGNED: 4294966062 * 4294967240 =                 69104 | DUT =                69104
+SIGNED:      32768 * 4294934528 =           -1073741824 | DUT = 18446744072635809792
+RANDOM SIGNED: 12153524 * c0895e81 = fb8466bd5676ff24 | DUT = fb8466bd5676ff24
+RANDOM SIGNED: b1f05663 * 06b97b0d = fdf3132f4240f407 | DUT = 04ac8e3c4240f407
+RANDOM SIGNED: b2c28465 * 89375212 = 23d6e37c5ec8a91a | DUT = 23d6e37c5ec8a91a
+RANDOM SIGNED: 06d7cd0d * 3b23f176 = 0194b2375748c0fe | DUT = 0194b2375748c0fe
+RANDOM SIGNED: 76d457ed * 462df78c = 209366461f9ec09c | DUT = 209366461f9ec09c
+===============================================
+Simulation complete via $finish(1) at time 110 NS + 0
+./topLevel_tb.v:89         $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 09, 2023 at 10:07:49 IST  (total: 00:00:01)

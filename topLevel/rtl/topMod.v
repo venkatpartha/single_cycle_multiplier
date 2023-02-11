@@ -38,7 +38,7 @@ module booth32x32_top (
         .P8(PP8), .P9(PP9), .P10(PP10), .P11(PP11),
         .P12(PP12), .P13(PP13), .P14(PP14), .P15(PP15),
         .P16(PP16),
-        .s_u_m(s_um), .c_arr_y(c_arry)
+        .SUM(s_um), .CARRY(c_arry)
     );
 
     // -------------------------
