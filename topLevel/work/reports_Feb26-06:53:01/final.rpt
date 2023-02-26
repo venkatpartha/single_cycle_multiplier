@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/sgeuser114/Desktop/venkat/singleCycleProcessor/topLevel/work
+QoS Summary for booth32x32_top
+==========================================================================================
+Metric                          generic         map             syn_opt         final          
+==========================================================================================
+Slack (ps):                      -468            -168             -82             -82
+  R2R (ps):                  no_value        no_value        no_value        no_value
+  I2R (ps):                  no_value        no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value        no_value
+  I2O (ps):                      -468            -168             -82             -82
+  CG  (ps):                  no_value        no_value        no_value        no_value
+TNS (ps):                      17,736           4,891           2,189           2,189
+  R2R (ps):                  no_value        no_value        no_value        no_value
+  I2R (ps):                  no_value        no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value        no_value
+  I2O (ps):                    17,736           4,891           2,189           2,189
+  CG  (ps):                  no_value        no_value        no_value        no_value
+Failing Paths:                     53              46              40              40
+Cell Area:                     41,793          11,630          12,483          12,483
+Total Cell Area:               41,793          11,630          12,483          12,483
+Leaf Instances:                15,657           7,642           7,429           7,429
+Total Instances:               15,657           7,642           7,429           7,429
+Utilization (%):                 0.00            0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value        no_value
+==========================================================================================
+CPU  Runtime (h:m:s):        00:11:39        00:02:32        00:11:44        00:00:01
+Real Runtime (h:m:s):        00:23:03        00:02:13        00:12:53        00:00:03
+CPU  Elapsed (h:m:s):        00:11:46        00:14:18        00:26:02        00:26:03
+Real Elapsed (h:m:s):        00:23:05        00:25:18        00:38:11        00:38:14
+Memory (MB):                   870.92          872.94          861.94          861.94
+==========================================================================================
+==========================================================================================
+Flow Settings:
+==========================================================================================
+Total Runtime (h:m:s): 00:38:16
+Total Memory (MB):     861.94
+Executable Version:    17.22-s017_1
+==========================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

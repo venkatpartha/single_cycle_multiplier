@@ -177,14 +177,14 @@
 "type":"design"},
 
 {"index": "2", 
- "date": "Wed Mar 01 01:37:02 IST 2023",
- "seconds": 1677614822.376951,
- "netlist": "outputs_Mar01-01:18:52/booth32x32_top_m.v", 
+ "date": "Sun Feb 26 07:30:34 IST 2023",
+ "seconds": 1677376834.921895,
+ "netlist": "outputs_Feb26-06:53:01/booth32x32_top_m.v", 
  "design_name": "booth32x32_top", 
  "synth_workdir": "/home/sgeuser114/Desktop/venkat/singleCycleProcessor/topLevel/work", 
  "synthesis_command":"",
  "current_label": "booth32x32_top_mv", 
  "previous_label": "fv_map", 
- "write_verif_file_runtime": 0.791298 
+ "write_verif_file_runtime": 0.553207 
  }
 ]
