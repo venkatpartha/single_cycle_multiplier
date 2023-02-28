@@ -1,0 +1,138 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.22-s017_1, built Sun Apr 01 2018
+Options: 
+Date:    Wed Mar 01 00:50:58 2023
+Host:    compute-srv5.atme.in (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (12cores*96cpus*4physical cpus*Intel(R) Xeon(R) CPU E5-4650 v3 @ 2.10GHz 30720KB) (792277964KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (16 seconds elapsed).
+
+WARNING: This version of the tool is 1795 days old.
+@genus:root: 1> write_template -simple top.tcl
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [parse_options]
+        : The argument in question is 'top.tcl'.
+        : Check the command usage and correct the input to the command.
+  write_template: writes out a template script file for running the tool with the necessary commands and attributes 
+
+Usage: write_template [-performance] -outfile <string> [-split] [-no_sdc] [-dft] [-power] [-cpf] [-full] [-retime] [-n2n] [-multimode] [-simple]
+           [-area] [-yield] [-physical]
+
+    [-performance]:
+        enables some advanced optimization algorithms which could potentially improve QoR and will have an impact on runtime 
+    -outfile <string>:
+        specifies filename to write the template script 
+    [-split]:
+        writes out template script with separate file for setup, DFT and power 
+    [-no_sdc]:
+        writes out constraints in Genus format <optional> 
+    [-dft]:
+        writes out DFT attributes and commands in the template script 
+    [-power]:
+        writes out Clock Gating, Dynamic and Leakage power attributes in the template script 
+    [-cpf]:
+        writes out a template script for CPF based flow and a template CPF file (template.cpf). The template CPF file is read in the template script 
+        with the 'read_cpf' command 
+    [-full]:
+        writes out a template script with all the basic commands, DFT, power and retiming attributes 
+    [-retime]:
+        writes out retiming attributes and commands in the template script 
+    [-n2n]:
+        writes out a template script for netlist to netlist optimization 
+    [-multimode]:
+        writes out a template script for multimode analysis 
+    [-simple]:
+        writes out a simple template script 
+    [-area]:
+        writes out a template script for area critical designs 
+    [-yield]:
+        writes out a template script for yield 
+    [-physical]:
+        writes out a template script for Genus Physical Flow 
+@genus:root: 2> write_template -simple -top.tcl
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [parse_options]
+        : The argument in question is '-top.tcl'.
+  write_template: writes out a template script file for running the tool with the necessary commands and attributes 
+
+Usage: write_template [-performance] -outfile <string> [-split] [-no_sdc] [-dft] [-power] [-cpf] [-full] [-retime] [-n2n] [-multimode] [-simple]
+           [-area] [-yield] [-physical]
+
+    [-performance]:
+        enables some advanced optimization algorithms which could potentially improve QoR and will have an impact on runtime 
+    -outfile <string>:
+        specifies filename to write the template script 
+    [-split]:
+        writes out template script with separate file for setup, DFT and power 
+    [-no_sdc]:
+        writes out constraints in Genus format <optional> 
+    [-dft]:
+        writes out DFT attributes and commands in the template script 
+    [-power]:
+        writes out Clock Gating, Dynamic and Leakage power attributes in the template script 
+    [-cpf]:
+        writes out a template script for CPF based flow and a template CPF file (template.cpf). The template CPF file is read in the template script 
+        with the 'read_cpf' command 
+    [-full]:
+        writes out a template script with all the basic commands, DFT, power and retiming attributes 
+    [-retime]:
+        writes out retiming attributes and commands in the template script 
+    [-n2n]:
+        writes out a template script for netlist to netlist optimization 
+    [-multimode]:
+        writes out a template script for multimode analysis 
+    [-simple]:
+        writes out a simple template script 
+    [-area]:
+        writes out a template script for area critical designs 
+    [-yield]:
+        writes out a template script for yield 
+    [-physical]:
+        writes out a template script for Genus Physical Flow 
+@genus:root: 3> write_template -simple -output top.tcl
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [parse_options]
+        : The argument in question is '-output'.
+  write_template: writes out a template script file for running the tool with the necessary commands and attributes 
+
+Usage: write_template [-performance] -outfile <string> [-split] [-no_sdc] [-dft] [-power] [-cpf] [-full] [-retime] [-n2n] [-multimode] [-simple]
+           [-area] [-yield] [-physical]
+
+    [-performance]:
+        enables some advanced optimization algorithms which could potentially improve QoR and will have an impact on runtime 
+    -outfile <string>:
+        specifies filename to write the template script 
+    [-split]:
+        writes out template script with separate file for setup, DFT and power 
+    [-no_sdc]:
+        writes out constraints in Genus format <optional> 
+    [-dft]:
+        writes out DFT attributes and commands in the template script 
+    [-power]:
+        writes out Clock Gating, Dynamic and Leakage power attributes in the template script 
+    [-cpf]:
+        writes out a template script for CPF based flow and a template CPF file (template.cpf). The template CPF file is read in the template script 
+        with the 'read_cpf' command 
+    [-full]:
+        writes out a template script with all the basic commands, DFT, power and retiming attributes 
+    [-retime]:
+        writes out retiming attributes and commands in the template script 
+    [-n2n]:
+        writes out a template script for netlist to netlist optimization 
+    [-multimode]:
+        writes out a template script for multimode analysis 
+    [-simple]:
+        writes out a simple template script 
+    [-area]:
+        writes out a template script for area critical designs 
+    [-yield]:
+        writes out a template script for yield 
+    [-physical]:
+        writes out a template script for Genus Physical Flow 
+@genus:root: 4> exit
+Normal exit.

@@ -1,0 +1,1 @@
+ncbrowse -64bit -cdslib ./INCA_libs/irun.lnx8664.15.20.nc/cds.lib -hdlvar ./INCA_libs/irun.lnx8664.15.20.nc/hdl.var -sortby severity -sortby category -sortby tag ncverilog.log &
