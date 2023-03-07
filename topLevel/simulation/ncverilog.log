@@ -1,0 +1,1203 @@
+ncverilog(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s051: Started on Mar 02, 2023 at 21:35:40 IST
+ncverilog
+	../rtl/ieeewall.v
+	-hal
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  9       3
+		Scalar wires:          2375       -
+		Vectored wires:          24       -
+		Cont. assignments:     2375      15
+		Pseudo assignments:       1       1
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.pp_tree16x64:v
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib ./INCA_libs/irun.lnx8664.15.20.nc/cds.lib -logfile ncverilog.log -f /home/sgeuser114/Desktop/venkat/singleCycleProcessor/topLevel/simulation/INCA_libs/irun.lnx8664.15.20.nc/hal.args .
+hal: Snapshot:  worklib.pp_tree16x64:v.
+hal: Workspace: /home/sgeuser114/Desktop/venkat/singleCycleProcessor/topLevel/simulation.
+hal: Date: Thu Mar 02 21:35:41 IST 2023.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+`timescale 1ns/1ps
+|
+halcheck: *N,CDNOTE (../rtl/ieeewall.v,1|0): The compiler directive '`timescale' is used in the RTL.
+                // NOTE: because this is inside the generate-if, cout[i-1] is only referenced
+|
+halcheck: *W,MAXLEN (../rtl/ieeewall.v,29|0): The HDL source line is 93 characters, which exceeds the recommended length of 80 characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_0 (.a(P0),  .b(P1),  .c(P2),  .d(P3),  .cin_chain(1'b0), .sum(s0), .carry(c0));
+|
+halcheck: *W,MAXLEN (../rtl/ieeewall.v,102|0): The HDL source line is 120 characters, which exceeds the recommended length of 80 characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_1 (.a(P4),  .b(P5),  .c(P6),  .d(P7),  .cin_chain(1'b0), .sum(s1), .carry(c1));
+|
+halcheck: *W,MAXLEN (../rtl/ieeewall.v,103|0): The HDL source line is 120 characters, which exceeds the recommended length of 80 characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_2 (.a(P8),  .b(P9),  .c(P10), .d(P11), .cin_chain(1'b0), .sum(s2), .carry(c2));
+|
+halcheck: *W,MAXLEN (../rtl/ieeewall.v,104|0): The HDL source line is 120 characters, which exceeds the recommended length of 80 characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_3 (.a(P12), .b(P13), .c(P14), .d(P15), .cin_chain(1'b0), .sum(s3), .carry(c3));
+|
+halcheck: *W,MAXLEN (../rtl/ieeewall.v,105|0): The HDL source line is 120 characters, which exceeds the recommended length of 80 characters.
+module pp_tree16x64 #(
+|
+halcheck: *W,DIFFMN (../rtl/ieeewall.v,74|0): Module name 'pp_tree16x64' differs from file name 'ieeewall.v'.
+module pp_tree16x64 #(
+|
+halcheck: *N,PRTCNT (../rtl/ieeewall.v,74|0): Module/Entity 'pp_tree16x64' contains '19' ports.
+halcheck: (../rtl/ieeewall.v,74): Number of Input ports: 17.
+halcheck: (../rtl/ieeewall.v,74): Number of Output ports: 2.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_0 (.a(P0),  .b(P1),  .c(P2),  .d(P3),  .cin_chain(1'b0), .sum(s0), .carry(c0));
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,102|0): A constant is used in a port expression.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_1 (.a(P4),  .b(P5),  .c(P6),  .d(P7),  .cin_chain(1'b0), .sum(s1), .carry(c1));
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,103|0): A constant is used in a port expression.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_2 (.a(P8),  .b(P9),  .c(P10), .d(P11), .cin_chain(1'b0), .sum(s2), .carry(c2));
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,104|0): A constant is used in a port expression.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_3 (.a(P12), .b(P13), .c(P14), .d(P15), .cin_chain(1'b0), .sum(s3), .carry(c3));
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,105|0): A constant is used in a port expression.
+        .cin_chain(1'b0), .sum(s4), .carry(c4)
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,116|0): A constant is used in a port expression.
+        .cin_chain(1'b0), .sum(s5), .carry(c5)
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,121|0): A constant is used in a port expression.
+        .cin_chain(1'b0),
+|
+halcheck: *W,IPRTEX (../rtl/ieeewall.v,130|0): A constant is used in a port expression.
+    input  [WIDTH-1:0] P0,  input  [WIDTH-1:0] P1,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,77|0): Identifier 'P0' has a numeric value suffix.
+    input  [WIDTH-1:0] P0,  input  [WIDTH-1:0] P1,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,77|0): Identifier 'P1' has a numeric value suffix.
+    input  [WIDTH-1:0] P0,  input  [WIDTH-1:0] P1,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,77|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P2,  input  [WIDTH-1:0] P3,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,78|0): Identifier 'P2' has a numeric value suffix.
+    input  [WIDTH-1:0] P2,  input  [WIDTH-1:0] P3,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,78|0): Identifier 'P3' has a numeric value suffix.
+    input  [WIDTH-1:0] P2,  input  [WIDTH-1:0] P3,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,78|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P4,  input  [WIDTH-1:0] P5,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,79|0): Identifier 'P4' has a numeric value suffix.
+    input  [WIDTH-1:0] P4,  input  [WIDTH-1:0] P5,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,79|0): Identifier 'P5' has a numeric value suffix.
+    input  [WIDTH-1:0] P4,  input  [WIDTH-1:0] P5,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,79|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P6,  input  [WIDTH-1:0] P7,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,80|0): Identifier 'P6' has a numeric value suffix.
+    input  [WIDTH-1:0] P6,  input  [WIDTH-1:0] P7,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,80|0): Identifier 'P7' has a numeric value suffix.
+    input  [WIDTH-1:0] P6,  input  [WIDTH-1:0] P7,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,80|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P8,  input  [WIDTH-1:0] P9,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,81|0): Identifier 'P8' has a numeric value suffix.
+    input  [WIDTH-1:0] P8,  input  [WIDTH-1:0] P9,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,81|0): Identifier 'P9' has a numeric value suffix.
+    input  [WIDTH-1:0] P8,  input  [WIDTH-1:0] P9,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,81|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P10, input  [WIDTH-1:0] P11,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,82|0): Identifier 'P10' has a numeric value suffix.
+    input  [WIDTH-1:0] P10, input  [WIDTH-1:0] P11,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,82|0): Identifier 'P11' has a numeric value suffix.
+    input  [WIDTH-1:0] P10, input  [WIDTH-1:0] P11,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,82|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P12, input  [WIDTH-1:0] P13,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,83|0): Identifier 'P12' has a numeric value suffix.
+    input  [WIDTH-1:0] P12, input  [WIDTH-1:0] P13,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,83|0): Identifier 'P13' has a numeric value suffix.
+    input  [WIDTH-1:0] P12, input  [WIDTH-1:0] P13,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,83|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P14, input  [WIDTH-1:0] P15,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,84|0): Identifier 'P14' has a numeric value suffix.
+    input  [WIDTH-1:0] P14, input  [WIDTH-1:0] P15,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,84|0): Identifier 'P15' has a numeric value suffix.
+    input  [WIDTH-1:0] P14, input  [WIDTH-1:0] P15,
+|
+halcheck: *N,DECLIN (../rtl/ieeewall.v,84|0): Use a separate line for each HDL declaration.
+    input  [WIDTH-1:0] P16,
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,85|0): Identifier 'P16' has a numeric value suffix.
+    input  [WIDTH-1:0] P0,  input  [WIDTH-1:0] P1,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,77|0): Net name 'P0' uses uppercase characters.
+    input  [WIDTH-1:0] P0,  input  [WIDTH-1:0] P1,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,77|0): Net name 'P1' uses uppercase characters.
+    input  [WIDTH-1:0] P2,  input  [WIDTH-1:0] P3,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,78|0): Net name 'P2' uses uppercase characters.
+    input  [WIDTH-1:0] P2,  input  [WIDTH-1:0] P3,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,78|0): Net name 'P3' uses uppercase characters.
+    input  [WIDTH-1:0] P4,  input  [WIDTH-1:0] P5,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,79|0): Net name 'P4' uses uppercase characters.
+    input  [WIDTH-1:0] P4,  input  [WIDTH-1:0] P5,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,79|0): Net name 'P5' uses uppercase characters.
+    input  [WIDTH-1:0] P6,  input  [WIDTH-1:0] P7,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,80|0): Net name 'P6' uses uppercase characters.
+    input  [WIDTH-1:0] P6,  input  [WIDTH-1:0] P7,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,80|0): Net name 'P7' uses uppercase characters.
+    input  [WIDTH-1:0] P8,  input  [WIDTH-1:0] P9,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,81|0): Net name 'P8' uses uppercase characters.
+    input  [WIDTH-1:0] P8,  input  [WIDTH-1:0] P9,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,81|0): Net name 'P9' uses uppercase characters.
+    input  [WIDTH-1:0] P10, input  [WIDTH-1:0] P11,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,82|0): Net name 'P10' uses uppercase characters.
+    input  [WIDTH-1:0] P10, input  [WIDTH-1:0] P11,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,82|0): Net name 'P11' uses uppercase characters.
+    input  [WIDTH-1:0] P12, input  [WIDTH-1:0] P13,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,83|0): Net name 'P12' uses uppercase characters.
+    input  [WIDTH-1:0] P12, input  [WIDTH-1:0] P13,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,83|0): Net name 'P13' uses uppercase characters.
+    input  [WIDTH-1:0] P14, input  [WIDTH-1:0] P15,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,84|0): Net name 'P14' uses uppercase characters.
+    input  [WIDTH-1:0] P14, input  [WIDTH-1:0] P15,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,84|0): Net name 'P15' uses uppercase characters.
+    input  [WIDTH-1:0] P16,
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,85|0): Net name 'P16' uses uppercase characters.
+    output [WIDTH-1:0] SUM,     // final sum row
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,86|0): Net name 'SUM' uses uppercase characters.
+    output [WIDTH-1:0] CARRY    // final carry row (interpret as <<1)
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,87|0): Net name 'CARRY' uses uppercase characters.
+    wire [WIDTH-1:0] s0, s1, s2, s3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,91|0): Identifier 's0' has a numeric value suffix.
+    wire [WIDTH-1:0] s0, s1, s2, s3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,91|0): Identifier 's1' has a numeric value suffix.
+    wire [WIDTH-1:0] s0, s1, s2, s3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,91|0): Identifier 's2' has a numeric value suffix.
+    wire [WIDTH-1:0] s0, s1, s2, s3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,91|0): Identifier 's3' has a numeric value suffix.
+    wire [WIDTH-1:0] c0, c1, c2, c3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,92|0): Identifier 'c0' has a numeric value suffix.
+    wire [WIDTH-1:0] c0, c1, c2, c3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,92|0): Identifier 'c1' has a numeric value suffix.
+    wire [WIDTH-1:0] c0, c1, c2, c3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,92|0): Identifier 'c2' has a numeric value suffix.
+    wire [WIDTH-1:0] c0, c1, c2, c3;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,92|0): Identifier 'c3' has a numeric value suffix.
+    wire [WIDTH-1:0] s4, s5;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,95|0): Identifier 's4' has a numeric value suffix.
+    wire [WIDTH-1:0] s4, s5;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,95|0): Identifier 's5' has a numeric value suffix.
+    wire [WIDTH-1:0] c4, c5;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,96|0): Identifier 'c4' has a numeric value suffix.
+    wire [WIDTH-1:0] c4, c5;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,96|0): Identifier 'c5' has a numeric value suffix.
+    wire [WIDTH-1:0] s6, c6;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,99|0): Identifier 's6' has a numeric value suffix.
+    wire [WIDTH-1:0] s6, c6;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,99|0): Identifier 'c6' has a numeric value suffix.
+    parameter WIDTH = 64
+|
+halcheck: *W,PRMVAL (../rtl/ieeewall.v,75|0): Bit width not specified for parameter 'WIDTH'.
+    parameter WIDTH = 64
+|
+halcheck: *W,PRMBSE (../rtl/ieeewall.v,75|0): Base not specified for parameter 'WIDTH'.
+    wire [WIDTH-1:0] c0_sh = c0 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,109|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    wire [WIDTH-1:0] c1_sh = c1 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,110|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    wire [WIDTH-1:0] c2_sh = c2 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,111|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    wire [WIDTH-1:0] c3_sh = c3 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,112|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    wire [WIDTH-1:0] c4_sh = c4 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,125|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    wire [WIDTH-1:0] c5_sh = c5 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,126|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    wire [WIDTH-1:0] c6_sh = c6 << 1;
+|
+halcheck: *W,SHFTOF (../rtl/ieeewall.v,135|0): Shift overflow in module/design-unit pp_tree16x64, some bits will be lost.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_0 (.a(P0),  .b(P1),  .c(P2),  .d(P3),  .cin_chain(1'b0), .sum(s0), .carry(c0));
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,102|0): Module instance name 'S1_0' uses uppercase characters.
+module compressor42_vec #(
+|
+halcheck: *W,DIFFMN (../rtl/ieeewall.v,6|0): Module name 'compressor42_vec' differs from file name 'ieeewall.v'.
+module compressor42_vec #(
+|
+halcheck: *W,MULTMF (../rtl/ieeewall.v,6|0): More than one design-unit definition in file 'ieeewall.v'.
+module compressor42_vec #(
+|
+halcheck: *N,PRTCNT (../rtl/ieeewall.v,6|0): Module/Entity 'compressor42_vec' contains '7' ports.
+halcheck: (../rtl/ieeewall.v,6): Number of Input ports: 5.
+halcheck: (../rtl/ieeewall.v,6): Number of Output ports: 2.
+    wire [WIDTH-1:0] s1;
+|
+halcheck: *W,NUMSUF (../rtl/ieeewall.v,18|0): Identifier 's1' has a numeric value suffix.
+    parameter WIDTH = 64
+|
+halcheck: *W,PRMVAL (../rtl/ieeewall.v,7|0): Bit width not specified for parameter 'WIDTH'.
+    parameter WIDTH = 64
+|
+halcheck: *W,PRMBSE (../rtl/ieeewall.v,7|0): Base not specified for parameter 'WIDTH'.
+            if (i == 0) begin
+|
+halcheck: *W,UNMGEN (../rtl/ieeewall.v,26|0): Unnamed generate block found in module 'compressor42_vec'.
+            end else begin
+|
+halcheck: *W,UNMGEN (../rtl/ieeewall.v,28|0): Unnamed generate block found in module 'compressor42_vec'.
+    wire [WIDTH-1:0] cout;
+|
+halcheck: *W,URDWIR (../rtl/ieeewall.v,19|0): Wire 'cout[63]' defined in module 'compressor42_vec' does not drive any object, but is assigned at least once.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_1 (.a(P4),  .b(P5),  .c(P6),  .d(P7),  .cin_chain(1'b0), .sum(s1), .carry(c1));
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,103|0): Module instance name 'S1_1' uses uppercase characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_2 (.a(P8),  .b(P9),  .c(P10), .d(P11), .cin_chain(1'b0), .sum(s2), .carry(c2));
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,104|0): Module instance name 'S1_2' uses uppercase characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S1_3 (.a(P12), .b(P13), .c(P14), .d(P15), .cin_chain(1'b0), .sum(s3), .carry(c3));
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,105|0): Module instance name 'S1_3' uses uppercase characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S2_L (
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,114|0): Module instance name 'S2_L' uses uppercase characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S2_R (
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,119|0): Module instance name 'S2_R' uses uppercase characters.
+    compressor42_vec #(.WIDTH(WIDTH)) S3_FINAL (
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,128|0): Module instance name 'S3_FINAL' uses uppercase characters.
+    compressor32_vec #(.WIDTH(WIDTH)) S4_FINAL (
+|
+halcheck: *W,LCVARN (../rtl/ieeewall.v,138|0): Module instance name 'S4_FINAL' uses uppercase characters.
+module compressor32_vec #(
+|
+halcheck: *W,DIFFMN (../rtl/ieeewall.v,49|0): Module name 'compressor32_vec' differs from file name 'ieeewall.v'.
+module compressor32_vec #(
+|
+halcheck: *W,MULTMF (../rtl/ieeewall.v,49|0): More than one design-unit definition in file 'ieeewall.v'.
+module compressor32_vec #(
+|
+halcheck: *N,PRTCNT (../rtl/ieeewall.v,49|0): Module/Entity 'compressor32_vec' contains '5' ports.
+halcheck: (../rtl/ieeewall.v,49): Number of Input ports: 3.
+halcheck: (../rtl/ieeewall.v,49): Number of Output ports: 2.
+    parameter WIDTH = 64
+|
+halcheck: *W,PRMVAL (../rtl/ieeewall.v,50|0): Bit width not specified for parameter 'WIDTH'.
+    parameter WIDTH = 64
+|
+halcheck: *W,PRMBSE (../rtl/ieeewall.v,50|0): Base not specified for parameter 'WIDTH'.
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 92.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 0.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+    compressor32_vec #(.WIDTH(WIDTH)) S4_FINAL (
+|
+halstruct: *W,TPOUNR (../rtl/ieeewall.v,138|0): Output 'SUM' of top-level module is not a register.
+    compressor32_vec #(.WIDTH(WIDTH)) S4_FINAL (
+|
+halstruct: *E,CBPAHI (../rtl/ieeewall.v,138|0): Combinatorial path crossing multiple units drives 'SUM'.
+halstruct: (../rtl/ieeewall.v,138): in instance 'pp_tree16x64', output 'sum[0]' of instance 'S4_FINAL' drives 'SUM'.
+halstruct: (../rtl/ieeewall.v,61): in instance 'pp_tree16x64.S4_FINAL', combinatorial function of input 'a' drives 'sum[0]'.
+halstruct: (../rtl/ieeewall.v,138): in instance 'pp_tree16x64', 's6' drives input 'a' of instance 'S4_FINAL'.
+halstruct: (../rtl/ieeewall.v,128): in instance 'pp_tree16x64', output 'sum[0]' of instance 'S3_FINAL' drives 's6'.
+halstruct: (../rtl/ieeewall.v,39): in instance 'pp_tree16x64.S3_FINAL', combinatorial function drives 'sum[0]'.
+    compressor32_vec #(.WIDTH(WIDTH)) S4_FINAL (
+|
+halstruct: *W,TPOUNR (../rtl/ieeewall.v,138|0): Output 'CARRY' of top-level module is not a register.
+    compressor32_vec #(.WIDTH(WIDTH)) S4_FINAL (
+|
+halstruct: *E,CBPAHI (../rtl/ieeewall.v,138|0): Combinatorial path crossing multiple units drives 'CARRY'.
+halstruct: (../rtl/ieeewall.v,138): in instance 'pp_tree16x64', output 'carry[0]' of instance 'S4_FINAL' drives 'CARRY'.
+halstruct: (../rtl/ieeewall.v,62): in instance 'pp_tree16x64.S4_FINAL', combinatorial function of input 'a' drives 'carry[0]'.
+halstruct: (../rtl/ieeewall.v,138): in instance 'pp_tree16x64', 's6' drives input 'a' of instance 'S4_FINAL'.
+halstruct: (../rtl/ieeewall.v,128): in instance 'pp_tree16x64', output 'sum[0]' of instance 'S3_FINAL' drives 's6'.
+halstruct: (../rtl/ieeewall.v,39): in instance 'pp_tree16x64.S3_FINAL', combinatorial function drives 'sum[0]'.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[0]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[1]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[2]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[3]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[4]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[5]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[6]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[7]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[8]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[9]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[10]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[11]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[12]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[13]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[14]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[15]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[16]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[17]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[18]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[19]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[20]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[21]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[22]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[23]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[24]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[25]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[26]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[27]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[28]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[29]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[30]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[31]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[32]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[33]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[34]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[35]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[36]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[37]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[38]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[39]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[40]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[41]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[42]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[43]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[44]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[45]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[46]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[47]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[48]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[49]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[50]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[51]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[52]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[53]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[54]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[55]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[56]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[57]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[58]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[59]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[60]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[61]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[62]' is assigned asynchronously.
+            assign sum[i]   = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,39|0): Output port 'sum[63]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[0]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[1]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[2]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[3]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[4]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[5]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[6]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[7]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[8]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[9]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[10]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[11]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[12]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[13]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[14]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[15]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[16]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[17]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[18]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[19]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[20]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[21]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[22]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[23]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[24]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[25]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[26]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[27]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[28]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[29]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[30]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[31]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[32]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[33]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[34]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[35]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[36]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[37]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[38]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[39]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[40]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[41]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[42]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[43]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[44]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[45]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[46]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[47]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[48]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[49]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[50]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[51]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[52]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[53]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[54]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[55]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[56]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[57]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[58]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[59]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[60]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[61]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[62]' is assigned asynchronously.
+            assign carry[i] = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,40|0): Output port 'carry[63]' is assigned asynchronously.
+            assign cout[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *N,INFNOT (../rtl/ieeewall.v,36|0): Ignoring wire 'cout[63]' with no fanout to module/design-unit outputs or child instances.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[0]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[1]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[2]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[3]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[4]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[5]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[6]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[7]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[8]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[9]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[10]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[11]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[12]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[13]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[14]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[15]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[16]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[17]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[18]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[19]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[20]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[21]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[22]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[23]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[24]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[25]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[26]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[27]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[28]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[29]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[30]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[31]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[32]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[33]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[34]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[35]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[36]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[37]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[38]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[39]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[40]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[41]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[42]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[43]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[44]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[45]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[46]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[47]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[48]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[49]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[50]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[51]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[52]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[53]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[54]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[55]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[56]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[57]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[58]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[59]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[60]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[61]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[62]' is assigned asynchronously.
+            assign sum[i]   = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,61|0): Output port 'sum[63]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[0]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[1]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[2]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[3]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[4]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[5]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[6]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[7]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[8]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[9]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[10]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[11]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[12]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[13]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[14]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[15]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[16]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[17]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[18]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[19]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[20]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[21]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[22]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[23]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[24]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[25]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[26]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[27]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[28]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[29]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[30]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[31]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[32]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[33]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[34]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[35]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[36]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[37]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[38]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[39]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[40]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[41]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[42]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[43]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[44]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[45]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[46]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[47]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[48]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[49]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[50]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[51]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[52]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[53]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[54]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[55]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[56]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[57]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[58]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[59]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[60]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[61]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[62]' is assigned asynchronously.
+            assign carry[i] = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/ieeewall.v,62|0): Output port 'carry[63]' is assigned asynchronously.
+module pp_tree16x64 #(
+|
+halstruct: *W,ATLGLC (../rtl/ieeewall.v,74|0): Glue logic inferred in top-level module/design-unit 'pp_tree16x64'.
+halstruct: (../rtl/ieeewall.v,109): HDL-statement inferred as glue logic.
+halstruct: (../rtl/ieeewall.v,110): HDL-statement inferred as glue logic.
+halstruct: (../rtl/ieeewall.v,111): HDL-statement inferred as glue logic.
+halstruct: (../rtl/ieeewall.v,112): HDL-statement inferred as glue logic.
+halstruct: (../rtl/ieeewall.v,125): HDL-statement inferred as glue logic.
+halstruct: (../rtl/ieeewall.v,126): HDL-statement inferred as glue logic.
+halstruct: (../rtl/ieeewall.v,135): HDL-statement inferred as glue logic.
+module pp_tree16x64 #(
+|
+halstruct: *N,NUMDFF (../rtl/ieeewall.v,74|0): Number of single-bit D flip-flops present in the hierarchy is 0.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 2.
+halstruct: Total warnings = 259.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (2)
+  CBPAHI (2)     
+
+ Warnings : (351)
+  ATLGLC (1)      DIFFMN (3)      IPRTEX (7)      LCVARN (27)    
+  MAXLEN (5)      MULTMF (2)      NUMSUF (32)     PRMBSE (3)     
+  PRMVAL (3)      SHFTOF (7)      SYNPRT (256)    TPOUNR (2)     
+  UNMGEN (2)      URDWIR (1)     
+
+ Notes    : (14)
+  CDNOTE (1)      DECLIN (8)      INFNOT (1)      NUMDFF (1)     
+  PRTCNT (3)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib ./INCA_libs/irun.lnx8664.15.20.nc/cds.lib -hdlvar ./INCA_libs/irun.lnx8664.15.20.nc/hdl.var -sortby severity -sortby category -sortby tag ncverilog.log
+
+TOOL:	ncverilog	15.20-s051: Exiting on Mar 02, 2023 at 21:35:44 IST  (total: 00:00:04)

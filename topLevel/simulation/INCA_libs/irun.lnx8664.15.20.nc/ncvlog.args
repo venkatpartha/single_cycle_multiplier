@@ -1,21 +1,18 @@
 //
-// File created by:  irun
+// File created by:  ncverilog
 // Do not modify this file
 //
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
 -RUNMODE
-../rtl/multi_f.v
-../rtl/test03.v
-../rtl/topLevel_2.v
-../rtl/cla.v
-../verification/topLevel_tb_2.v
+../rtl/ieeewall.v
 -CDSLIB
 ./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
 -HDLVAR
 ./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
 -MESSAGES
 -UPDATE
+-MIXEDLANG
 -XLLIBSTORE
 ./INCA_libs/irun.lnx8664.15.20.nc/xllibs
 -ALLOWUNBOUND

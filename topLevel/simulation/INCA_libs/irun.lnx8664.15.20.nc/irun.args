@@ -4,8 +4,4 @@
 //
 -access
 +rwc
-../rtl/multi_f.v
-../rtl/test03.v
-../rtl/topLevel_2.v
-../rtl/cla.v
-../verification/topLevel_tb_2.v
+../rtl/ieeewall.v
