@@ -1,16 +1,16 @@
 `timescale 1ns/1ps
 
-// 64-bit Carry Lookahead Adder
-module cla_64bit (
-    input  [63:0] A,
-    input  [63:0] B,
+// 32-bit Carry Lookahead Adder
+module cla_32bit (
+    input  [31:0] A,
+    input  [31:0] B,
     input         Cin,
-    output [63:0] Sum,
+    output [31:0] Sum,
     output        Cout
 );
 
-    wire [63:0] G, P;     // Generate & Propagate
-    wire [64:0] C;        // Carry bits
+    wire [31:0] G, P;     // Generate & Propagate
+    wire [32:0] C;        // Carry bits
 
     assign C[0] = Cin;
 
@@ -21,12 +21,12 @@ module cla_64bit (
     // Carry lookahead logic
     genvar i;
     generate
-        for (i = 0; i < 64; i = i + 1) begin : CLA_LOOP
+        for (i = 0; i < 32; i = i + 1) begin : CLA_LOOP
             assign C[i+1] = G[i] | (P[i] & C[i]);
             assign Sum[i] = P[i] ^ C[i];
         end
     endgenerate
 
-    assign Cout = C[64];
+    assign Cout = C[32];
 
 endmodule

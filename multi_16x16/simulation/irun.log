@@ -1,0 +1,35 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 08, 2023 at 10:30:40 IST
+irun
+	-access +rwc
+	../rtl/topMod_02.v
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		booth16x16_top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.booth16x16_top:v <0x3e77d489>
+			streams:   3, words:   480
+		worklib.cla_32bit:v <0x5a9cff47>
+			streams:   3, words:   846
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 8       6
+		Registers:               7       7
+		Scalar wires:          615       -
+		Vectored wires:         18       -
+		Always blocks:           2       2
+		Cont. assignments:     625      30
+		Pseudo assignments:      1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.booth16x16_top:v
+Loading snapshot worklib.booth16x16_top:v .................... Done
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 08, 2023 at 10:30:40 IST  (total: 00:00:00)

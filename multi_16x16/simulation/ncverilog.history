@@ -1,0 +1,18 @@
+s1(07Mar2023:12:36:44):  irun -access +rwc ../rtl/wallaceTree_8PP.v 
+s2(07Mar2023:12:38:08):  ncverilog ../rtl/wallaceTree_8PP.v -hal 
+s3(07Mar2023:16:11:06):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s4(07Mar2023:16:24:42):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s5(07Mar2023:16:26:21):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s6(07Mar2023:16:27:27):  ncverilog ../rtl/pp_8_Gen.v -hal 
+s7(07Mar2023:16:47:43):  irun -access +rwc ../rtl/topMod_02.v ../rtl/wallaceTree_8PP.v ../rtl/pp_8_Gen.v ../rtl/cla.v 
+s8(07Mar2023:16:48:50):  irun -access +rwc ../rtl/topMod_02.v 
+s9(07Mar2023:16:53:19):  irun -access +rwc ../rtl/topMod_02.v 
+s10(07Mar2023:16:53:46):  ncverilog ../rtl/topMod_02.v -hal 
+s11(07Mar2023:18:12:13):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s12(07Mar2023:18:21:09):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s13(07Mar2023:18:21:42):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s14(07Mar2023:18:22:22):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s15(08Mar2023:08:43:05):  irun -access +rwc ../rtl/pp_8_Gen.v 
+s16(08Mar2023:08:43:31):  ncverilog ../rtl/pp_8_Gen.v -hal 
+s17(08Mar2023:09:15:45):  irun -access +rwc ../rtl/topMod_02.v 
+s18(08Mar2023:09:15:50):  ncverilog ../rtl/topMod_02.v -hal 

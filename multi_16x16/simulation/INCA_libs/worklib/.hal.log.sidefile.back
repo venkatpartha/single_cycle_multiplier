@@ -1,0 +1,16 @@
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+halsynth: *M,_SCOPE: booth16x16_top.booth_enc
+halsynth: *W,VLGMEM (../rtl/pp_8_Gen.v,36|0): Module booth_radix4_multiplier has Verilog memories. For large memories, processing may take some time.
+halsynth: *W,LATBAS (../rtl/pp_8_Gen.v,21|0): In module/design-unit booth_radix4_multiplier, latch is assigned by blocking assignments.
+halsynth: *W,LATMLG (../rtl/pp_8_Gen.v,21|0): The latches 'neg_flag' in the process/always block are mixed with combinational logic.
+~:CLKOUT
+~:CLKSRD
+~:COMBLP
+~:INPOUT
+~:MUDREG
+~:MULWIR
+~:UNDRIV
+halsynth: *M,_SCOPE: booth16x16_top
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 3.

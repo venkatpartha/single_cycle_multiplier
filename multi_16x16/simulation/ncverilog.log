@@ -1,0 +1,1409 @@
+ncverilog(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s051: Started on Mar 08, 2023 at 09:15:50 IST
+ncverilog
+	../rtl/topMod_02.v
+	-hal
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+        .A(s_um),
+              |
+ncelab: *W,CUVMPW (../rtl/topMod_02.v,51|14): port sizes differ in port connection (32/64).
+        .B(cry_sh), // carry row shifted left
+                |
+ncelab: *W,CUVMPW (../rtl/topMod_02.v,52|16): port sizes differ in port connection (32/64).
+        .Sum(PROD_RESULT),
+                       |
+ncelab: *W,CUVMPW (../rtl/topMod_02.v,54|23): port sizes differ in port connection (32/64).
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 8       6
+		Registers:               7       7
+		Scalar wires:          743       -
+		Expanded wires:         32       1
+		Vectored wires:         16       -
+		Always blocks:           2       2
+		Cont. assignments:     688      29
+		Pseudo assignments:      1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.booth16x16_top:v
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib ./INCA_libs/irun.lnx8664.15.20.nc/cds.lib -logfile ncverilog.log -f /home/sgeuser114/Desktop/venkat/singleCycleProcessor/multi_16x16/simulation/INCA_libs/irun.lnx8664.15.20.nc/hal.args .
+hal: Snapshot:  worklib.booth16x16_top:v.
+hal: Workspace: /home/sgeuser114/Desktop/venkat/singleCycleProcessor/multi_16x16/simulation.
+hal: Date: Wed Mar 08 09:15:51 IST 2023.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+`timescale 1ns/1ps
+|
+halcheck: *N,CDNOTE (../rtl/topMod_02.v,1|0): The compiler directive '`timescale' is used in the RTL.
+	.neg_flag(neg_flag), 
+|
+halcheck: *W,CTLCHR (../rtl/topMod_02.v,24|0): HDL source line contains one or more control characters.
+	.zero_flag(zero_flag),
+|
+halcheck: *W,CTLCHR (../rtl/topMod_02.v,25|0): HDL source line contains one or more control characters.
+module booth16x16_top (
+|
+halcheck: *W,DIFFMN (../rtl/topMod_02.v,3|0): Module name 'booth16x16_top' differs from file name 'topMod_02.v'.
+module booth16x16_top (
+|
+halcheck: *N,PRTCNT (../rtl/topMod_02.v,3|0): Module/Entity 'booth16x16_top' contains '6' ports.
+halcheck: (../rtl/topMod_02.v,3): Number of Input ports: 3.
+halcheck: (../rtl/topMod_02.v,3): Number of Output ports: 3.
+        .Cin(1'b0),
+|
+halcheck: *W,IPRTEX (../rtl/topMod_02.v,53|0): A constant is used in a port expression.
+    input   [15:0] A,
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,4|0): Numeric value '15' used for identifier 'A'. Use constants to avoid portability issues.
+    input   [15:0] B,
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,5|0): Numeric value '15' used for identifier 'B'. Use constants to avoid portability issues.
+    output [31:0] PROD_RESULT      // lower 32 bits
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,9|0): Numeric value '31' used for identifier 'PROD_RESULT'. Use constants to avoid portability issues.
+    input   [15:0] A,
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,4|0): Net name 'A' uses uppercase characters.
+    input   [15:0] B,
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,5|0): Net name 'B' uses uppercase characters.
+    output [31:0] PROD_RESULT      // lower 32 bits
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,9|0): Net name 'PROD_RESULT' uses uppercase characters.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,15|0): Net name 'PP0' uses uppercase characters.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,15|0): Identifier 'PP0' has a numeric value suffix.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,15|0): Numeric value '31' used for identifier 'PP0'. Use constants to avoid portability issues.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,15|0): Net name 'PP1' uses uppercase characters.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,15|0): Identifier 'PP1' has a numeric value suffix.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,15|0): Net name 'PP2' uses uppercase characters.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,15|0): Identifier 'PP2' has a numeric value suffix.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,15|0): Net name 'PP3' uses uppercase characters.
+    wire [31:0] PP0, PP1, PP2, PP3;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,15|0): Identifier 'PP3' has a numeric value suffix.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,16|0): Net name 'PP4' uses uppercase characters.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,16|0): Identifier 'PP4' has a numeric value suffix.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,16|0): Numeric value '31' used for identifier 'PP4'. Use constants to avoid portability issues.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,16|0): Net name 'PP5' uses uppercase characters.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,16|0): Identifier 'PP5' has a numeric value suffix.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,16|0): Net name 'PP6' uses uppercase characters.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,16|0): Identifier 'PP6' has a numeric value suffix.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,16|0): Net name 'PP7' uses uppercase characters.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,16|0): Identifier 'PP7' has a numeric value suffix.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,16|0): Net name 'PP8' uses uppercase characters.
+    wire [31:0] PP4, PP5, PP6, PP7, PP8;
+|
+halcheck: *W,NUMSUF (../rtl/topMod_02.v,16|0): Identifier 'PP8' has a numeric value suffix.
+    wire [31:0] s_um, c_arry;
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,34|0): Numeric value '31' used for identifier 's_um'. Use constants to avoid portability issues.
+    wire        Cout;
+|
+halcheck: *W,LCVARN (../rtl/topMod_02.v,46|0): Net name 'Cout' uses uppercase characters.
+    wire [31:0] cry_sh;
+|
+halcheck: *W,STYVAL (../rtl/topMod_02.v,47|0): Numeric value '31' used for identifier 'cry_sh'. Use constants to avoid portability issues.
+    assign cry_sh = (c_arry << 1);
+|
+halcheck: *W,SHFTOF (../rtl/topMod_02.v,48|0): Shift overflow in module/design-unit booth16x16_top, some bits will be lost.
+    module booth_radix4_multiplier (
+|
+halcheck: *N,IDLENG (../rtl/pp_8_Gen.v,3|0): Identifier name 'booth_radix4_multiplier' is not of appropriate length (4 to 16 characters).
+`timescale 1ns/1ps
+|
+halcheck: *N,CDNOTE (../rtl/pp_8_Gen.v,1|0): The compiler directive '`timescale' is used in the RTL.
+    output reg	  neg_flag,
+|
+halcheck: *W,CTLCHR (../rtl/pp_8_Gen.v,7|0): HDL source line contains one or more control characters.
+    output 	  zero_flag,
+|
+halcheck: *W,CTLCHR (../rtl/pp_8_Gen.v,8|0): HDL source line contains one or more control characters.
+	extend = 1'b0;
+|
+halcheck: *W,CTLCHR (../rtl/pp_8_Gen.v,22|0): HDL source line contains one or more control characters.
+    	sign = {2{B[15]}};
+|
+halcheck: *W,CTLCHR (../rtl/pp_8_Gen.v,23|0): HDL source line contains one or more control characters.
+    	usign = 2'b00; 
+|
+halcheck: *W,CTLCHR (../rtl/pp_8_Gen.v,24|0): HDL source line contains one or more control characters.
+	    neg_flag = B[15] ^ A[15];
+|
+halcheck: *W,CTLCHR (../rtl/pp_8_Gen.v,28|0): HDL source line contains one or more control characters.
+                3'b000, 3'b111: partial[i] = 32'b0;                     // 0 × A
+|
+halcheck: *W,BITUNS (../rtl/pp_8_Gen.v,42|0): Not all bits of constant '32'b0' are explicitly specified.
+halcheck: (../rtl/pp_8_Gen.v,42): Constant extended by 31 bits to -> 32'b(0000000000000000000000000000000)0.
+                3'b001, 3'b010: partial[i] = {{16{A[15]}}, A} << (2*i); // +1 × A
+|
+halcheck: *W,MAXLEN (../rtl/pp_8_Gen.v,43|0): The HDL source line is 81 characters, which exceeds the recommended length of 80 characters.
+                3'b011:         partial[i] = {{32{A[15]}}, A} << (2*i+1); // +2 × A
+|
+halcheck: *W,MAXLEN (../rtl/pp_8_Gen.v,44|0): The HDL source line is 83 characters, which exceeds the recommended length of 80 characters.
+                3'b100:         partial[i] = -({{16{A[15]}}, A} << (2*i+1)); // -2 × A
+|
+halcheck: *W,MAXLEN (../rtl/pp_8_Gen.v,45|0): The HDL source line is 86 characters, which exceeds the recommended length of 80 characters.
+                3'b101, 3'b110: partial[i] = -({{16{A[15]}}, A} << (2*i));   // -1 × A
+|
+halcheck: *W,MAXLEN (../rtl/pp_8_Gen.v,46|0): The HDL source line is 86 characters, which exceeds the recommended length of 80 characters.
+                default:        partial[i] = 32'b0;
+|
+halcheck: *W,BITUNS (../rtl/pp_8_Gen.v,47|0): Not all bits of constant '32'b0' are explicitly specified.
+halcheck: (../rtl/pp_8_Gen.v,47): Constant extended by 31 bits to -> 32'b(0000000000000000000000000000000)0.
+    module booth_radix4_multiplier (
+|
+halcheck: *W,DIFFMN (../rtl/pp_8_Gen.v,3|0): Module name 'booth_radix4_multiplier' differs from file name 'pp_8_Gen.v'.
+    module booth_radix4_multiplier (
+|
+halcheck: *N,PRTCNT (../rtl/pp_8_Gen.v,3|0): Module/Entity 'booth_radix4_multiplier' contains '14' ports.
+halcheck: (../rtl/pp_8_Gen.v,3): Number of Input ports: 3.
+halcheck: (../rtl/pp_8_Gen.v,3): Number of Output ports: 11.
+    input  [15:0] A,     // Multiplicand
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,4|0): Numeric value '15' used for identifier 'A'. Use constants to avoid portability issues.
+    input  [15:0] B,     // Multiplier
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,5|0): Numeric value '15' used for identifier 'B'. Use constants to avoid portability issues.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,9|0): Identifier 'PP0' has a numeric value suffix.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,9|0): Numeric value '31' used for identifier 'PP0'. Use constants to avoid portability issues.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,9|0): Identifier 'PP1' has a numeric value suffix.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *N,DECLIN (../rtl/pp_8_Gen.v,9|0): Use a separate line for each HDL declaration.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,9|0): Identifier 'PP2' has a numeric value suffix.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,9|0): Identifier 'PP3' has a numeric value suffix.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,10|0): Identifier 'PP4' has a numeric value suffix.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,10|0): Numeric value '31' used for identifier 'PP4'. Use constants to avoid portability issues.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,10|0): Identifier 'PP5' has a numeric value suffix.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *N,DECLIN (../rtl/pp_8_Gen.v,10|0): Use a separate line for each HDL declaration.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,10|0): Identifier 'PP6' has a numeric value suffix.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,10|0): Identifier 'PP7' has a numeric value suffix.
+    output [31:0] PP8
+|
+halcheck: *W,NUMSUF (../rtl/pp_8_Gen.v,11|0): Identifier 'PP8' has a numeric value suffix.
+    output [31:0] PP8
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,11|0): Numeric value '31' used for identifier 'PP8'. Use constants to avoid portability issues.
+    input  [15:0] A,     // Multiplicand
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,4|0): Net name 'A' uses uppercase characters.
+    input  [15:0] B,     // Multiplier
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,5|0): Net name 'B' uses uppercase characters.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,9|0): Net name 'PP0' uses uppercase characters.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,9|0): Net name 'PP1' uses uppercase characters.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,9|0): Net name 'PP2' uses uppercase characters.
+    output [31:0] PP0, PP1, PP2, PP3,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,9|0): Net name 'PP3' uses uppercase characters.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,10|0): Net name 'PP4' uses uppercase characters.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,10|0): Net name 'PP5' uses uppercase characters.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,10|0): Net name 'PP6' uses uppercase characters.
+    output [31:0] PP4, PP5, PP6, PP7,
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,10|0): Net name 'PP7' uses uppercase characters.
+    output [31:0] PP8
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,11|0): Net name 'PP8' uses uppercase characters.
+    reg [18:0] B_ext;
+|
+halcheck: *W,LCVARN (../rtl/pp_8_Gen.v,15|0): Register name 'B_ext' uses uppercase characters.
+    reg [18:0] B_ext;
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,15|0): Numeric value '18' used for identifier 'B_ext'. Use constants to avoid portability issues.
+    reg [31:0] partial [8:0];
+|
+halcheck: *W,STYVAL (../rtl/pp_8_Gen.v,36|0): Numeric value '31' used for identifier 'partial'. Use constants to avoid portability issues.
+    always @(*) begin
+|
+halcheck: *W,NOBLKN (../rtl/pp_8_Gen.v,21|0): Each block should be labeled with a meaningful name.
+    always @(*) begin
+|
+halcheck: *W,NOBLKN (../rtl/pp_8_Gen.v,39|0): Each block should be labeled with a meaningful name.
+            case (B_ext[2*i +: 3]) // Take 3-bit group
+|
+halcheck: *W,CDEFCV (../rtl/pp_8_Gen.v,41|0): The case items of the case statement in module/design-unit booth_enc cover all the numerical values of the case expression. The default clause is not required.
+                3'b001, 3'b010: partial[i] = {{16{A[15]}}, A} << (2*i); // +1 × A
+|
+halcheck: *W,MXUANS (../rtl/pp_8_Gen.v,43|0): Expression '{{16{A[15]}},A} ...' in module/design-unit booth_enc has both signed and unsigned variables/constants.
+halcheck: (../rtl/pp_8_Gen.v,43): Variable 'i' is signed.
+halcheck: (../rtl/pp_8_Gen.v,43): Variable 'A' is unsigned.
+halcheck: (../rtl/pp_8_Gen.v,43): Variable 'A[15]' is unsigned.
+                3'b011:         partial[i] = {{32{A[15]}}, A} << (2*i+1); // +2 × A
+|
+halcheck: *W,MXUANS (../rtl/pp_8_Gen.v,44|0): Expression '{{32{A[15]}},A} ...' in module/design-unit booth_enc has both signed and unsigned variables/constants.
+halcheck: (../rtl/pp_8_Gen.v,44): Variable 'i' is signed.
+halcheck: (../rtl/pp_8_Gen.v,44): Variable 'A' is unsigned.
+halcheck: (../rtl/pp_8_Gen.v,44): Variable 'A[15]' is unsigned.
+                3'b100:         partial[i] = -({{16{A[15]}}, A} << (2*i+1)); // -2 × A
+|
+halcheck: *W,SGNUSG (../rtl/pp_8_Gen.v,45|0): Negative value '-({{16{A[15]}},A} << ((2 * i) + 1))' assigned to an unsigned variable 'partial[i]' in module/design-unit booth_enc.
+                3'b100:         partial[i] = -({{16{A[15]}}, A} << (2*i+1)); // -2 × A
+|
+halcheck: *W,MXUANS (../rtl/pp_8_Gen.v,45|0): Expression '-({{16{A[15]}},A...' in module/design-unit booth_enc has both signed and unsigned variables/constants.
+halcheck: (../rtl/pp_8_Gen.v,45): Variable 'i' is signed.
+halcheck: (../rtl/pp_8_Gen.v,45): Variable 'A' is unsigned.
+halcheck: (../rtl/pp_8_Gen.v,45): Variable 'A[15]' is unsigned.
+                3'b101, 3'b110: partial[i] = -({{16{A[15]}}, A} << (2*i));   // -1 × A
+|
+halcheck: *W,SGNUSG (../rtl/pp_8_Gen.v,46|0): Negative value '-({{16{A[15]}},A} << (2 * i))' assigned to an unsigned variable 'partial[i]' in module/design-unit booth_enc.
+                3'b101, 3'b110: partial[i] = -({{16{A[15]}}, A} << (2*i));   // -1 × A
+|
+halcheck: *W,MXUANS (../rtl/pp_8_Gen.v,46|0): Expression '-({{16{A[15]}},A...' in module/design-unit booth_enc has both signed and unsigned variables/constants.
+halcheck: (../rtl/pp_8_Gen.v,46): Variable 'i' is signed.
+halcheck: (../rtl/pp_8_Gen.v,46): Variable 'A' is unsigned.
+halcheck: (../rtl/pp_8_Gen.v,46): Variable 'A[15]' is unsigned.
+    assign zero_flag = ((A || B) == 0) ? 1'b1 : 1'b0 ;
+|
+halcheck: *W,ULCMPE (../rtl/pp_8_Gen.v,19|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit booth_enc. LHS operand is 1 bits, RHS operand is 32 bits.
+    assign zero_flag = ((A || B) == 0) ? 1'b1 : 1'b0 ;
+|
+halcheck: *W,MULOPR (../rtl/pp_8_Gen.v,19|0): Logical OR operator applied to multi-bit operand 'A' and 'B' in module/design-unit booth_enc.
+`timescale 1ns/1ps
+|
+halcheck: *N,CDNOTE (../rtl/wallaceTree_8PP.v,1|0): The compiler directive '`timescale' is used in the RTL.
+	parameter width = 32
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,4|0): HDL source line contains one or more control characters.
+	if (i == 0) begin
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,24|0): HDL source line contains one or more control characters.
+      		assign cin_i = cin_chain;
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,25|0): HDL source line contains one or more control characters.
+	 end
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,26|0): HDL source line contains one or more control characters.
+    	else begin
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,27|0): HDL source line contains one or more control characters.
+      		assign cin_i = cout[i-1];
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,28|0): HDL source line contains one or more control characters.
+	 end
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,29|0): HDL source line contains one or more control characters.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halcheck: *W,MAXLEN (../rtl/wallaceTree_8PP.v,37|0): The HDL source line is 81 characters, which exceeds the recommended length of 80 characters.
+	parameter width = 32
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,45|0): HDL source line contains one or more control characters.
+	parameter width = 32
+|
+halcheck: *W,CTLCHR (../rtl/wallaceTree_8PP.v,73|0): HDL source line contains one or more control characters.
+module pp_tree7x32 #(
+|
+halcheck: *W,DIFFMN (../rtl/wallaceTree_8PP.v,72|0): Module name 'pp_tree7x32' differs from file name 'wallaceTree_8PP.v'.
+module pp_tree7x32 #(
+|
+halcheck: *N,PRTCNT (../rtl/wallaceTree_8PP.v,72|0): Module/Entity 'pp_tree7x32' contains '11' ports.
+halcheck: (../rtl/wallaceTree_8PP.v,72): Number of Input ports: 9.
+halcheck: (../rtl/wallaceTree_8PP.v,72): Number of Output ports: 2.
+    input  wire [width-1:0] P0,  input wire [width-1:0] P1,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,75|0): Identifier 'P0' has a numeric value suffix.
+    input  wire [width-1:0] P0,  input wire [width-1:0] P1,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,75|0): Identifier 'P1' has a numeric value suffix.
+    input  wire [width-1:0] P0,  input wire [width-1:0] P1,
+|
+halcheck: *N,DECLIN (../rtl/wallaceTree_8PP.v,75|0): Use a separate line for each HDL declaration.
+    input  wire [width-1:0] P2,  input wire [width-1:0] P3,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,76|0): Identifier 'P2' has a numeric value suffix.
+    input  wire [width-1:0] P2,  input wire [width-1:0] P3,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,76|0): Identifier 'P3' has a numeric value suffix.
+    input  wire [width-1:0] P2,  input wire [width-1:0] P3,
+|
+halcheck: *N,DECLIN (../rtl/wallaceTree_8PP.v,76|0): Use a separate line for each HDL declaration.
+    input  wire [width-1:0] P4,  input wire [width-1:0] P5,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,77|0): Identifier 'P4' has a numeric value suffix.
+    input  wire [width-1:0] P4,  input wire [width-1:0] P5,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,77|0): Identifier 'P5' has a numeric value suffix.
+    input  wire [width-1:0] P4,  input wire [width-1:0] P5,
+|
+halcheck: *N,DECLIN (../rtl/wallaceTree_8PP.v,77|0): Use a separate line for each HDL declaration.
+    input  wire [width-1:0] P6,  input wire [width-1:0] P7,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,78|0): Identifier 'P6' has a numeric value suffix.
+    input  wire [width-1:0] P6,  input wire [width-1:0] P7,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,78|0): Identifier 'P7' has a numeric value suffix.
+    input  wire [width-1:0] P6,  input wire [width-1:0] P7,
+|
+halcheck: *N,DECLIN (../rtl/wallaceTree_8PP.v,78|0): Use a separate line for each HDL declaration.
+    input  wire [width-1:0] P8,
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,79|0): Identifier 'P8' has a numeric value suffix.
+    input  wire [width-1:0] P0,  input wire [width-1:0] P1,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,75|0): Net name 'P0' uses uppercase characters.
+    input  wire [width-1:0] P0,  input wire [width-1:0] P1,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,75|0): Net name 'P1' uses uppercase characters.
+    input  wire [width-1:0] P2,  input wire [width-1:0] P3,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,76|0): Net name 'P2' uses uppercase characters.
+    input  wire [width-1:0] P2,  input wire [width-1:0] P3,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,76|0): Net name 'P3' uses uppercase characters.
+    input  wire [width-1:0] P4,  input wire [width-1:0] P5,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,77|0): Net name 'P4' uses uppercase characters.
+    input  wire [width-1:0] P4,  input wire [width-1:0] P5,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,77|0): Net name 'P5' uses uppercase characters.
+    input  wire [width-1:0] P6,  input wire [width-1:0] P7,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,78|0): Net name 'P6' uses uppercase characters.
+    input  wire [width-1:0] P6,  input wire [width-1:0] P7,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,78|0): Net name 'P7' uses uppercase characters.
+    input  wire [width-1:0] P8,
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,79|0): Net name 'P8' uses uppercase characters.
+    wire [width-1:0] c0, c00, c1, s0, s00, s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,83|0): Identifier 'c0' has a numeric value suffix.
+    wire [width-1:0] c0, c00, c1, s0, s00, s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,83|0): Identifier 'c00' has a numeric value suffix.
+    wire [width-1:0] c0, c00, c1, s0, s00, s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,83|0): Identifier 'c1' has a numeric value suffix.
+    wire [width-1:0] c0, c00, c1, s0, s00, s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,83|0): Identifier 's0' has a numeric value suffix.
+    wire [width-1:0] c0, c00, c1, s0, s00, s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,83|0): Identifier 's00' has a numeric value suffix.
+    wire [width-1:0] c0, c00, c1, s0, s00, s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,83|0): Identifier 's1' has a numeric value suffix.
+    wire [width-1:0] cl0, cl00;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,86|0): Identifier 'cl0' has a numeric value suffix.
+    wire [width-1:0] cl0, cl00;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,86|0): Identifier 'cl00' has a numeric value suffix.
+    wire [width-1:0] cl1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,87|0): Identifier 'cl1' has a numeric value suffix.
+    wire oneBitZero;
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,88|0): Net name 'oneBitZero' uses uppercase characters.
+	parameter width = 32
+|
+halcheck: *W,UCCONN (../rtl/wallaceTree_8PP.v,73|0): Lowercase characters used for identifier 'width'. Use uppercase characters for names of constants and user-defined types.
+	parameter width = 32
+|
+halcheck: *W,PRMVAL (../rtl/wallaceTree_8PP.v,73|0): Bit width not specified for parameter 'width'.
+	parameter width = 32
+|
+halcheck: *W,PRMBSE (../rtl/wallaceTree_8PP.v,73|0): Base not specified for parameter 'width'.
+    assign cl00 = (c00 << 1);
+|
+halcheck: *W,SHFTOF (../rtl/wallaceTree_8PP.v,103|0): Shift overflow in module/design-unit tree, some bits will be lost.
+    assign cl1 = (c1 << 1);
+|
+halcheck: *W,SHFTOF (../rtl/wallaceTree_8PP.v,111|0): Shift overflow in module/design-unit tree, some bits will be lost.
+    assign cl0 = (c0 << 1);
+|
+halcheck: *W,SHFTOF (../rtl/wallaceTree_8PP.v,112|0): Shift overflow in module/design-unit tree, some bits will be lost.
+    compressor42_vec S1_0 (
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,92|0): Module instance name 'S1_0' uses uppercase characters.
+module compressor42_vec #(
+|
+halcheck: *W,DIFFMN (../rtl/wallaceTree_8PP.v,3|0): Module name 'compressor42_vec' differs from file name 'wallaceTree_8PP.v'.
+module compressor42_vec #(
+|
+halcheck: *W,MULTMF (../rtl/wallaceTree_8PP.v,3|0): More than one design-unit definition in file 'wallaceTree_8PP.v'.
+module compressor42_vec #(
+|
+halcheck: *N,PRTCNT (../rtl/wallaceTree_8PP.v,3|0): Module/Entity 'compressor42_vec' contains '7' ports.
+halcheck: (../rtl/wallaceTree_8PP.v,3): Number of Input ports: 5.
+halcheck: (../rtl/wallaceTree_8PP.v,3): Number of Output ports: 2.
+    wire [width-1:0] s1;
+|
+halcheck: *W,NUMSUF (../rtl/wallaceTree_8PP.v,15|0): Identifier 's1' has a numeric value suffix.
+	parameter width = 32
+|
+halcheck: *W,UCCONN (../rtl/wallaceTree_8PP.v,4|0): Lowercase characters used for identifier 'width'. Use uppercase characters for names of constants and user-defined types.
+	parameter width = 32
+|
+halcheck: *W,PRMVAL (../rtl/wallaceTree_8PP.v,4|0): Bit width not specified for parameter 'width'.
+	parameter width = 32
+|
+halcheck: *W,PRMBSE (../rtl/wallaceTree_8PP.v,4|0): Base not specified for parameter 'width'.
+	if (i == 0) begin
+|
+halcheck: *W,UNMGEN (../rtl/wallaceTree_8PP.v,24|0): Unnamed generate block found in module 'compressor42_vec'.
+    	else begin
+|
+halcheck: *W,UNMGEN (../rtl/wallaceTree_8PP.v,27|0): Unnamed generate block found in module 'compressor42_vec'.
+    wire [width-1:0] cout;
+|
+halcheck: *W,URDWIR (../rtl/wallaceTree_8PP.v,18|0): Wire 'cout[31]' defined in module 'compressor42_vec' does not drive any object, but is assigned at least once.
+    compressor42_vec S1_1 (
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,97|0): Module instance name 'S1_1' uses uppercase characters.
+    compressor32_vec S1_FINAL (
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,104|0): Module instance name 'S1_FINAL' uses uppercase characters.
+module compressor32_vec #(
+|
+halcheck: *W,DIFFMN (../rtl/wallaceTree_8PP.v,44|0): Module name 'compressor32_vec' differs from file name 'wallaceTree_8PP.v'.
+module compressor32_vec #(
+|
+halcheck: *W,MULTMF (../rtl/wallaceTree_8PP.v,44|0): More than one design-unit definition in file 'wallaceTree_8PP.v'.
+module compressor32_vec #(
+|
+halcheck: *N,PRTCNT (../rtl/wallaceTree_8PP.v,44|0): Module/Entity 'compressor32_vec' contains '5' ports.
+halcheck: (../rtl/wallaceTree_8PP.v,44): Number of Input ports: 3.
+halcheck: (../rtl/wallaceTree_8PP.v,44): Number of Output ports: 2.
+	parameter width = 32
+|
+halcheck: *W,UCCONN (../rtl/wallaceTree_8PP.v,45|0): Lowercase characters used for identifier 'width'. Use uppercase characters for names of constants and user-defined types.
+	parameter width = 32
+|
+halcheck: *W,PRMVAL (../rtl/wallaceTree_8PP.v,45|0): Bit width not specified for parameter 'width'.
+	parameter width = 32
+|
+halcheck: *W,PRMBSE (../rtl/wallaceTree_8PP.v,45|0): Base not specified for parameter 'width'.
+    compressor42_vec S2_FINAL (
+|
+halcheck: *W,LCVARN (../rtl/wallaceTree_8PP.v,113|0): Module instance name 'S2_FINAL' uses uppercase characters.
+    cla_64bit cla (
+|
+halcheck: *N,IDLENG (../rtl/topMod_02.v,50|0): Identifier name 'cla' is not of appropriate length (4 to 16 characters).
+    cla_64bit cla (
+|
+halcheck: *E,SIZMIS (../rtl/topMod_02.v,50|0): Port 'A' has size mismatch between module instantiation and declaration.
+halcheck: (../rtl/cla.v,5):  '32' bits at instantiation and '64' bits at declaration.
+    cla_64bit cla (
+|
+halcheck: *E,SIZMIS (../rtl/topMod_02.v,50|0): Port 'B' has size mismatch between module instantiation and declaration.
+halcheck: (../rtl/cla.v,6):  '32' bits at instantiation and '64' bits at declaration.
+    cla_64bit cla (
+|
+halcheck: *E,SIZMIS (../rtl/topMod_02.v,50|0): Port 'Sum' has size mismatch between module instantiation and declaration.
+halcheck: (../rtl/cla.v,8):  '32' bits at instantiation and '64' bits at declaration.
+`timescale 1ns/1ps
+|
+halcheck: *N,CDNOTE (../rtl/cla.v,1|0): The compiler directive '`timescale' is used in the RTL.
+module cla_32bit (
+|
+halcheck: *W,DIFFMN (../rtl/cla.v,4|0): Module name 'cla_64bit' differs from file name 'cla.v'.
+module cla_32bit (
+|
+halcheck: *N,PRTCNT (../rtl/cla.v,4|0): Module/Entity 'cla_64bit' contains '5' ports.
+halcheck: (../rtl/cla.v,4): Number of Input ports: 3.
+halcheck: (../rtl/cla.v,4): Number of Output ports: 2.
+    input  [31:0] A,
+|
+halcheck: *W,STYVAL (../rtl/cla.v,5|0): Numeric value '31' used for identifier 'A'. Use constants to avoid portability issues.
+    input  [31:0] B,
+|
+halcheck: *W,STYVAL (../rtl/cla.v,6|0): Numeric value '31' used for identifier 'B'. Use constants to avoid portability issues.
+    output [31:0] Sum,
+|
+halcheck: *W,STYVAL (../rtl/cla.v,8|0): Numeric value '31' used for identifier 'Sum'. Use constants to avoid portability issues.
+    input  [31:0] A,
+|
+halcheck: *W,LCVARN (../rtl/cla.v,5|0): Net name 'A' uses uppercase characters.
+    input  [31:0] B,
+|
+halcheck: *W,LCVARN (../rtl/cla.v,6|0): Net name 'B' uses uppercase characters.
+    input         Cin,
+|
+halcheck: *W,LCVARN (../rtl/cla.v,7|0): Net name 'Cin' uses uppercase characters.
+    output [31:0] Sum,
+|
+halcheck: *W,LCVARN (../rtl/cla.v,8|0): Net name 'Sum' uses uppercase characters.
+    output        Cout
+|
+halcheck: *W,LCVARN (../rtl/cla.v,9|0): Net name 'Cout' uses uppercase characters.
+    wire [31:0] G, P;     // Generate & Propagate
+|
+halcheck: *W,LCVARN (../rtl/cla.v,12|0): Net name 'G' uses uppercase characters.
+    wire [31:0] G, P;     // Generate & Propagate
+|
+halcheck: *W,STYVAL (../rtl/cla.v,12|0): Numeric value '31' used for identifier 'G'. Use constants to avoid portability issues.
+    wire [31:0] G, P;     // Generate & Propagate
+|
+halcheck: *W,LCVARN (../rtl/cla.v,12|0): Net name 'P' uses uppercase characters.
+    wire [32:0] C;        // Carry bits
+|
+halcheck: *W,LCVARN (../rtl/cla.v,13|0): Net name 'C' uses uppercase characters.
+    wire [32:0] C;        // Carry bits
+|
+halcheck: *W,STYVAL (../rtl/cla.v,13|0): Numeric value '32' used for identifier 'C'. Use constants to avoid portability issues.
+    wire        Cout;
+|
+halcheck: *W,URDWIR (../rtl/topMod_02.v,46|0): Wire 'Cout' defined in module 'booth16x16_top' does not drive any object, but is assigned at least once.
+halcheck: Total errors   = 3.
+halcheck: Total warnings = 164.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+    reg [31:0] partial [8:0];
+|
+halsynth: *W,VLGMEM (../rtl/pp_8_Gen.v,36|0): Module booth_radix4_multiplier has Verilog memories. For large memories, processing may take some time.
+    always @(*) begin
+|
+halsynth: *W,LATBAS (../rtl/pp_8_Gen.v,21|0): In module/design-unit booth_radix4_multiplier, latch is assigned by blocking assignments.
+    always @(*) begin
+|
+halsynth: *W,LATMLG (../rtl/pp_8_Gen.v,21|0): The latches 'neg_flag' in the process/always block are mixed with combinational logic.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 3.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+    booth_radix4_multiplier booth_enc (
+|
+halstruct: *W,TPOUNR (../rtl/topMod_02.v,20|0): Output 'neg_flag' of top-level module is not a register.
+    booth_radix4_multiplier booth_enc (
+|
+halstruct: *W,TPOUNR (../rtl/topMod_02.v,20|0): Output 'zero_flag' of top-level module is not a register.
+    cla_64bit cla (
+|
+halstruct: *W,TPOUNR (../rtl/topMod_02.v,50|0): Output 'PROD_RESULT' of top-level module is not a register.
+    cla_64bit cla (
+|
+halstruct: *E,CBPAHI (../rtl/topMod_02.v,50|0): Combinatorial path crossing multiple units drives 'PROD_RESULT'.
+halstruct: (../rtl/topMod_02.v,50): in instance 'booth16x16_top', 'Sum' drives 'PROD_RESULT'.
+halstruct: (../rtl/topMod_02.v,50): in instance 'booth16x16_top', output 'Sum[0]' of instance 'cla' drives 'Sum'.
+halstruct: (../rtl/cla.v,26): in instance 'booth16x16_top.cla', combinatorial function of 'P' drives 'Sum[0]'.
+halstruct: (../rtl/cla.v,19): in instance 'booth16x16_top.cla', combinatorial function of input 'A' drives 'P'.
+halstruct: (../rtl/topMod_02.v,50): in instance 'booth16x16_top', 's_um' drives input 'A' of instance 'cla'.
+halstruct: (../rtl/topMod_02.v,36): in instance 'booth16x16_top', output 's_u_m' of instance 'tree' drives 's_um'.
+halstruct: (../rtl/wallaceTree_8PP.v,113): in instance 'booth16x16_top.tree', output 'sum[0]' of instance 'S2_FINAL' drives 's_u_m'.
+halstruct: (../rtl/wallaceTree_8PP.v,36): in instance 'booth16x16_top.tree.S2_FINAL', combinatorial function drives 'sum[0]'.
+    cla_64bit cla (
+|
+halstruct: *W,UNCONO (../rtl/topMod_02.v,50|0): Port 'Sum' (which is being used as an output) of entity/module 'cla_64bit' is being driven inside the design, but not connected (either partially or completely) in its instance 'booth16x16_top.cla'.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[63]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[62]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[61]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[60]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[59]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[58]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[57]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[56]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[55]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[54]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[53]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[52]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[51]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[50]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[49]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[48]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[47]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[46]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[45]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[44]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[43]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[42]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[41]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[40]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[39]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[38]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[37]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[36]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[35]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[34]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[33]' is not connected.
+halstruct: (../rtl/topMod_02.v,50): 'Sum[32]' is not connected.
+    cla_64bit cla (
+|
+halstruct: *W,UNCONO (../rtl/topMod_02.v,50|0): Port 'Cout' (which is being used as an output) of entity/module 'cla_64bit' is being driven inside the design, but not connected (either partially or completely) in its instance 'booth16x16_top.cla'.
+	    neg_flag = B[15] ^ A[15];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,28|0): Output port 'neg_flag' is assigned asynchronously.
+    assign zero_flag = ((A || B) == 0) ? 1'b1 : 1'b0 ;
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,19|0): Output port 'zero_flag' is assigned asynchronously.
+    assign PP0  = partial[0];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,54|0): Output port 'PP0' is assigned asynchronously.
+    assign PP1  = partial[1];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,55|0): Output port 'PP1' is assigned asynchronously.
+    assign PP2  = partial[2];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,56|0): Output port 'PP2' is assigned asynchronously.
+    assign PP3  = partial[3];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,57|0): Output port 'PP3' is assigned asynchronously.
+    assign PP4  = partial[4];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,58|0): Output port 'PP4' is assigned asynchronously.
+    assign PP5  = partial[5];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,59|0): Output port 'PP5' is assigned asynchronously.
+    assign PP6  = partial[6];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,60|0): Output port 'PP6' is assigned asynchronously.
+    assign PP7  = partial[7];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,61|0): Output port 'PP7' is assigned asynchronously.
+    assign PP8  = partial[8];
+|
+halstruct: *W,SYNPRT (../rtl/pp_8_Gen.v,62|0): Output port 'PP8' is assigned asynchronously.
+	extend = 1'b0;
+|
+halstruct: *N,INFNOT (../rtl/pp_8_Gen.v,22|0): Ignoring wire 'extend' with no fanout to module/design-unit outputs or child instances.
+    	sign = {2{B[15]}};
+|
+halstruct: *N,INFNOT (../rtl/pp_8_Gen.v,23|0): Ignoring wire 'sign[0]' with no fanout to module/design-unit outputs or child instances.
+    	sign = {2{B[15]}};
+|
+halstruct: *N,INFNOT (../rtl/pp_8_Gen.v,23|0): Ignoring wire 'sign[1]' with no fanout to module/design-unit outputs or child instances.
+    	usign = 2'b00; 
+|
+halstruct: *N,INFNOT (../rtl/pp_8_Gen.v,24|0): Ignoring wire 'usign' with no fanout to module/design-unit outputs or child instances.
+            B_ext = {usign, B, extend};   // {0, B, 0}
+|
+halstruct: *W,SELCLK (../rtl/pp_8_Gen.v,32|0): The selector of the mux is connected to the clock signal 'booth16x16_top.booth_enc.alu_signed'.
+            B_ext = {usign, B, extend};   // {0, B, 0}
+|
+halstruct: *W,DALIAS (../rtl/pp_8_Gen.v,32|0): Aliased constructs found. Wires 'B_ext[18]' and 'B_ext[17]' have same drivers.
+halstruct: (../rtl/pp_8_Gen.v,32): B_ext[17].
+    input         alu_signed, // 1 = signed, 0 = unsigned
+|
+halstruct: *N,CLKINF (../rtl/pp_8_Gen.v,6|0): Signal 'booth16x16_top.booth_enc.alu_signed' was inferred as clock.
+halstruct: (../rtl/pp_8_Gen.v,6): Clock source is signal 'booth16x16_top.booth_enc.alu_signed'.
+halstruct: (../rtl/pp_8_Gen.v,28): Drives the latch 'booth16x16_top.booth_enc.neg_flag'.
+    compressor42_vec S2_FINAL (
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,113|0): Output port 's_u_m' is assigned asynchronously.
+    compressor42_vec S2_FINAL (
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,113|0): Output port 'c_arr_y' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[0]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[1]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[2]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[3]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[4]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[5]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[6]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[7]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[8]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[9]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[10]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[11]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[12]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[13]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[14]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[15]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[16]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[17]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[18]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[19]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[20]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[21]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[22]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[23]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[24]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[25]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[26]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[27]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[28]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[29]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[30]' is assigned asynchronously.
+            assign sum[i] = s1[i] ^ d[i] ^ cin_i;
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,36|0): Output port 'sum[31]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[0]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[1]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[2]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[3]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[4]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[5]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[6]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[7]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[8]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[9]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[10]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[11]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[12]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[13]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[14]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[15]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[16]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[17]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[18]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[19]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[20]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[21]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[22]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[23]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[24]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[25]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[26]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[27]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[28]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[29]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[30]' is assigned asynchronously.
+            assign carry[i]  = (s1[i] & d[i]) | (s1[i] & cin_i) | (d[i] & cin_i);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,37|0): Output port 'carry[31]' is assigned asynchronously.
+            assign cout[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *N,INFNOT (../rtl/wallaceTree_8PP.v,33|0): Ignoring wire 'cout[31]' with no fanout to module/design-unit outputs or child instances.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[0]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[1]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[2]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[3]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[4]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[5]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[6]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[7]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[8]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[9]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[10]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[11]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[12]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[13]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[14]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[15]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[16]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[17]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[18]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[19]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[20]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[21]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[22]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[23]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[24]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[25]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[26]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[27]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[28]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[29]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[30]' is assigned asynchronously.
+            assign sm[i]  = a[i] ^ b[i] ^ c[i];
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,62|0): Output port 'sm[31]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[0]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[1]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[2]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[3]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[4]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[5]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[6]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[7]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[8]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[9]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[10]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[11]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[12]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[13]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[14]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[15]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[16]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[17]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[18]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[19]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[20]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[21]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[22]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[23]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[24]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[25]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[26]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[27]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[28]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[29]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[30]' is assigned asynchronously.
+            assign cry[i]  = (a[i] & b[i]) | (a[i] & c[i]) | (b[i] & c[i]);
+|
+halstruct: *W,SYNPRT (../rtl/wallaceTree_8PP.v,63|0): Output port 'cry[31]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[0]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[1]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[2]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[3]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[4]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[5]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[6]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[7]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[8]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[9]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[10]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[11]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[12]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[13]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[14]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[15]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[16]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[17]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[18]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[19]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[20]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[21]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[22]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[23]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[24]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[25]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[26]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[27]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[28]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[29]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[30]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[31]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[32]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[33]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[34]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[35]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[36]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[37]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[38]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[39]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[40]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[41]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[42]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[43]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[44]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[45]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[46]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[47]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[48]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[49]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[50]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[51]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[52]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[53]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[54]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[55]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[56]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[57]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[58]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[59]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[60]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[61]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[62]' is assigned asynchronously.
+            assign Sum[i] = P[i] ^ C[i];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,26|0): Output port 'Sum[63]' is assigned asynchronously.
+    assign Cout = C[32];
+|
+halstruct: *W,SYNPRT (../rtl/cla.v,30|0): Output port 'Cout' is assigned asynchronously.
+module booth16x16_top (
+|
+halstruct: *W,ATLGLC (../rtl/topMod_02.v,3|0): Glue logic inferred in top-level module/design-unit 'booth16x16_top'.
+halstruct: (../rtl/topMod_02.v,48): HDL-statement inferred as glue logic.
+module booth16x16_top (
+|
+halstruct: *W,CLKUCL (../rtl/topMod_02.v,3|0): The clock 'booth16x16_top.alu_signed' drives a combinational logic. Depth '1' exceeded at 'booth16x16_top.booth_enc.B_ext[17]'.
+module booth16x16_top (
+|
+halstruct: *W,CLKUCL (../rtl/topMod_02.v,3|0): The clock 'booth16x16_top.alu_signed' drives a combinational logic. Depth '1' exceeded at 'booth16x16_top.booth_enc.B_ext[18]'.
+	    neg_flag = B[15] ^ A[15];
+|
+halstruct: *W,LATINF (../rtl/pp_8_Gen.v,28|0): Process/always block models a latch, or signal 'neg_flag' is not assigned a value in all branches.
+module booth16x16_top (
+|
+halstruct: *N,NUMDFF (../rtl/topMod_02.v,3|0): Number of single-bit D flip-flops present in the hierarchy is 0.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 1.
+halstruct: Total warnings = 217.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (4)
+  CBPAHI (1)      SIZMIS (3)     
+
+ Warnings : (387)
+  ATLGLC (1)      BITUNS (2)      CDEFCV (1)      CLKUCL (2)     
+  CTLCHR (17)     CUVMPW (3)      DALIAS (1)      DIFFMN (6)     
+  IPRTEX (1)      LATBAS (1)      LATINF (1)      LATMLG (1)     
+  LCVARN (47)     MAXLEN (5)      MULOPR (1)      MULTMF (2)     
+  MXUANS (4)      NOBLKN (2)      NUMSUF (37)     PRMBSE (3)     
+  PRMVAL (3)      SELCLK (1)      SGNUSG (2)      SHFTOF (4)     
+  STYVAL (19)     SYNPRT (206)    TPOUNR (3)      UCCONN (3)     
+  ULCMPE (1)      UNCONO (2)      UNMGEN (2)      URDWIR (2)     
+  VLGMEM (1)     
+
+ Notes    : (25)
+  CDNOTE (4)      CLKINF (1)      DECLIN (6)      IDLENG (2)     
+  INFNOT (5)      NUMDFF (1)      PRTCNT (6)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib ./INCA_libs/irun.lnx8664.15.20.nc/cds.lib -hdlvar ./INCA_libs/irun.lnx8664.15.20.nc/hdl.var -sortby severity -sortby category -sortby tag ncverilog.log
+
+TOOL:	ncverilog	15.20-s051: Exiting on Mar 08, 2023 at 09:15:54 IST  (total: 00:00:04)
