@@ -13,23 +13,27 @@
 
     // Extended multiplier (conditionally signed or unsigned)
     reg [18:0] B_ext;
-    
+    reg [1:0] sign, usign;
+    reg extend;
+
     assign zero_flag = ((A || B) == 0) ? 1'b1 : 1'b0 ;
 
     always @(*) begin
+	extend = 1'b0;
+    	sign = {2{B[15]}};
+    	usign = 2'b00; 
         if (alu_signed == 1'b1) begin
             // Signed extension for negative numbers
-            B_ext = {2{B[15]}, B, 1'b0};   // {sign, B, 0}
-
+            B_ext = {sign, B, extend};   // {sign, B, 0}
 	    neg_flag = B[15] ^ A[15];
 
         end else begin
             // Unsigned extension with 0
-            B_ext = {2'b00, B, 1'b0};   // {0, B, 0}
+            B_ext = {usign, B, extend};   // {0, B, 0}
         end
     end
 
-    reg  [31:0] partial [8:0];
+    reg [31:0] partial [8:0];
     integer i;
 
     always @(*) begin
@@ -44,6 +48,7 @@
             endcase
         end
     end
+  
 
     // Assign outputs to Wallace Tree inputs
     assign PP0  = partial[0];
